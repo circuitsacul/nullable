@@ -1,0 +1,26 @@
+[tool.mypy]
+strict = true
+
+[tool.ruff]
+extend-select = ["I"]
+
+[tool.poetry]
+name = "nullable"
+version = "0"
+description = "Typed Null support"
+authors = ["CircuitSacul <circuitsacul@icloud.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+mypy = "^1.1.1"
+ruff = "^0.0.260"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
