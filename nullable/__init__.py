@@ -1,7 +1,7 @@
 import enum
 import typing as t
 
-__all__ = ("Null", "Nullable", "NullableNoeOr")
+__all__ = ("Null", "Nullable", "NullableNoneOr")
 
 
 class _NullType(enum.Enum):
