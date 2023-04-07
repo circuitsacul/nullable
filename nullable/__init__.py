@@ -1,15 +1,15 @@
 import enum
 import typing as t
 
-__all__ = ("Null", "Nullable", "NullableNoneOr")
+__all__ = ("Null", "NullType", "Nullable", "NullableNoneOr")
 
 
-class _NullType(enum.Enum):
+class NullType(enum.Enum):
     NULL = object()
 
 
 T = t.TypeVar("T")
 
-Null = _NullType.NULL
-Nullable = t.Union[_NullType, T]
-NullableNoneOr = t.Union[_NullType, None, T]
+Null = NullType.NULL
+Nullable = t.Union[NullType, T]
+NullableNoneOr = t.Union[NullType, None, T]
